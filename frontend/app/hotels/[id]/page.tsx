@@ -143,7 +143,6 @@ console.log(rooms)
             </div>
             <div className="text-xl font-medium">
               ${hotel.pricePerDay}
-              
               <span className="text-muted-foreground text-sm"> / night</span>
             </div>
           </div>
@@ -268,6 +267,7 @@ console.log(rooms)
                         mode="range"
                         defaultMonth={date.from}
                         selected={date}
+                        //@ts-ignore
                         onSelect={setDate}
                         numberOfMonths={2}
                       />
@@ -308,11 +308,20 @@ console.log(rooms)
                   <div className="border-t border-border pt-4 mt-4">
                     <div className="flex justify-between mb-2">
                       <span>
-                        ${hotel.pricePerDay} x {Math.ceil((date.to.getTime() - date.from.getTime()) / (1000 * 60 * 60 * 24))}{" "}
+                        ${hotel.pricePerDay} x{" "}
+                        {Math.ceil(
+                          (date.to.getTime() - date.from.getTime()) /
+                            (1000 * 60 * 60 * 24)
+                        )}{" "}
                         nights
                       </span>
                       <span>
-                        ${hotel.pricePerDay * Math.ceil((date.to.getTime() - date.from.getTime()) / (1000 * 60 * 60 * 24))}
+                        $
+                        {hotel.pricePerDay *
+                          Math.ceil(
+                            (date.to.getTime() - date.from.getTime()) /
+                              (1000 * 60 * 60 * 24)
+                          )}
                       </span>
                     </div>
                     <div className="flex justify-between mb-2">
@@ -321,8 +330,11 @@ console.log(rooms)
                         $
                         {Math.round(
                           hotel.pricePerDay *
-                            Math.ceil((date.to.getTime() - date.from.getTime()) / (1000 * 60 * 60 * 24)) *
-                            0.15,
+                            Math.ceil(
+                              (date.to.getTime() - date.from.getTime()) /
+                                (1000 * 60 * 60 * 24)
+                            ) *
+                            0.15
                         )}
                       </span>
                     </div>
@@ -332,8 +344,11 @@ console.log(rooms)
                         $
                         {Math.round(
                           hotel.pricePerDay *
-                            Math.ceil((date.to.getTime() - date.from.getTime()) / (1000 * 60 * 60 * 24)) *
-                            1.15,
+                            Math.ceil(
+                              (date.to.getTime() - date.from.getTime()) /
+                                (1000 * 60 * 60 * 24)
+                            ) *
+                            1.15
                         )}
                       </span>
                     </div>

@@ -20,12 +20,13 @@ export default function Navbar() {
        try {
          const token = localStorage.getItem("authToken"); // Replace with secure auth handling
          if (!token) {
-          setIsLoggedIn(false)
+           setIsLoggedIn(false);
            return;
          }
-         const user = await getUserProfile(token)
-         setUser(user)
-         setIsLoggedIn(true)
+         const user = await getUserProfile(token);
+         //@ts-ignore
+         setUser(user);
+         setIsLoggedIn(true);
        } catch (error) {
          console.error("Error booking hotel:", error);
          alert("Failed to book hotel. Please try again.");

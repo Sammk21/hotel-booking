@@ -38,15 +38,18 @@ Validations for check-in date and booking status
 - **JWT** for authentication
 - **bcrypt** for password hashing
 - **crypto-js** for Aadhaar number encryption
-- **dotenv** for environment variables
+- **nextjs** for frontend
+- **shadcn** for frontend components
 
 ## Installation
 
 1. **Clone the repository**
 
+### For backend
+
 ```bash
 git clone <repository-url>
-cd aadhaar-validation-system
+cd hotel-booking/backend
 ```
 
 2. **Install dependencies**
@@ -70,6 +73,44 @@ Edit the `.env` file with your database connection details and secrets.
 ```bash
 npx prisma migrate dev --name init
 ```
+
+## Running the Application
+
+### Development mode
+
+```bash
+npm run dev
+```
+
+### Production mode
+
+```bash
+npm start
+```
+
+
+### For frontend
+
+```bash
+git clone <repository-url>
+cd hotel-booking/frontend
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Set up environment variables**
+
+Copy the example environment file and update it with your own values:
+
+```bash
+cp .env.example .env
+```
+
+Edit the `.env` file with your database connection details and secrets.
 
 ## Running the Application
 
