@@ -81,6 +81,32 @@ npm start
 - **POST /api/aadhaar/verify/:aadhaarId** - Verify an Aadhaar number with mock third-party API
 - **GET /api/aadhaar/records** - Get a user's Aadhaar records
 
+### Hotel Endpoints
+
+- **GET /api/hotels:** List all hotels with optional filters
+- **GET /api/hotels/:id:** Get hotel details
+- **POST /api/hotels:** Admin endpoint to create hotels
+- **PUT /api/hotels/:id:** Admin endpoint to update hotels
+- **DELETE /api/hotels/:id:** Admin endpoint to delete hotels
+
+ ### Room Endpoints
+
+- **GET /api/rooms/hotel/:hotelId:** Get rooms by hotel
+- **GET /api/rooms/available/hotel/:hotelId:** Get available rooms by date range
+- **GET /api/rooms/:id:** Get room details
+- **POST /api/rooms/hotel/:hotelId:** Admin endpoint to create rooms
+- **PUT /api/rooms/:id:** Admin endpoint to update rooms
+- **DELETE /api/rooms/:id:** Admin endpoint to delete rooms
+
+### Booking Endpoints
+
+- **POST /api/bookings:** Create a new booking
+- **GET /api/bookings/my-bookings:** Get user's bookings
+- **GET /api/bookings/:id:** Get booking details
+- **PATCH /api/bookings/:id/cancel:** Cancel a booking
+- **POST /api/bookings/:id/check-in:** Check in with Aadhaar validation
+- **GET /api/bookings:** Admin endpoint to get all bookings
+
 ## API Documentation
 
 The API documentation is available at `/api-docs` when the server is running
