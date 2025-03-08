@@ -1,17 +1,35 @@
 
-# Aadhaar Validation System
+# Hotel booking system
 
-A secure Node.js backend for Aadhaar validation with user authentication and secure storage.
+A secure Node.js backend for Hotel booking system with user authentication and secure storage.
 
 ## Features
 
-- JWT-based authentication for secure API access
-- Secure storage of Aadhaar numbers with encryption
-- Basic validation for Aadhaar number format
-- Mock third-party verification API
-- Rate limiting to prevent abuse
-- API documentation with Swagger
-- Unit tests for core functionality
+
+### Hotel Management
+
+Complete CRUD operations for hotels (admin-only for write operations)
+Filtering and search capabilities for hotel listings
+
+
+### Room Management
+
+Room types with different capacities and pricing
+Room availability checking based on booking dates
+
+
+### Booking System
+
+Create, view, and cancel bookings
+Date validation to prevent booking conflicts
+Pricing calculation based on room rates and stay duration
+
+
+### Aadhaar-based Check-in
+
+Integration with existing Aadhaar validation system
+Secure storage of encrypted Aadhaar data used for check-in
+Validations for check-in date and booking status
 
 ## Tech Stack
 
