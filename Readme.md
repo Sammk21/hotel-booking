@@ -55,16 +55,18 @@ cd hotel-booking/backend
 ### Setting up environments
 Copy env.example 
 
-### Seed database
-
-```bash
-node ./prisma/seed.js
-```
 
 2. **Install dependencies**
 
 ```bash
 npm install
+```
+
+
+3. **Seed database**
+
+```bash
+node ./prisma/seed.js
 ```
 
 3. **Set up environment variables**
