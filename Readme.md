@@ -52,6 +52,15 @@ git clone <repository-url>
 cd hotel-booking/backend
 ```
 
+### Setting up environments
+Copy env.example 
+
+### Seed database
+
+```bash
+node ./prisma/seed.js
+```
+
 2. **Install dependencies**
 
 ```bash
